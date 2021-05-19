@@ -28,32 +28,32 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args) {
-        User user1 = new User("Stuart");
-        User user2 = new User("David");
+        User user1 = new User("Tim");
+        User user2 = new User("Stu");
         User user3 = new User("Diane");
 
         userRepository.save(user1);
         userRepository.save(user2);
         userRepository.save(user3);
 
-        Folder folder1 = new Folder("Home", user1);
-        Folder folder2 = new Folder("Websites", user1);
-        Folder folder3 = new Folder("Stuff", user2);
-        Folder folder4 = new Folder("Junk", user3);
+        Folder folder1 = new Folder("Memes", user1);
+        Folder folder2 = new Folder("More Memes", user1);
+        Folder folder3 = new Folder("CATS", user2);
+        Folder folder4 = new Folder("Doggos", user3);
 
         folderRepository.save(folder1);
         folderRepository.save(folder2);
         folderRepository.save(folder3);
         folderRepository.save(folder4);
 
-        File file1 = new File("One", ".txt", 100, folder1);
-        File file2 = new File("Two", ".exe", 100, folder1);
-        File file3 = new File("Three", ".swf", 100, folder2);
-        File file4 = new File("Four", ".zip", 100, folder3);
-        File file5 = new File("Five", ".txt", 100, folder4);
-        File file6 = new File("Six", ".txt", 100, folder2);
-        File file7 = new File("Seven", ".txt", 100, folder2);
-        File file8 = new File("Eight", ".txt", 100, folder1);
+        File file1 = new File("Awkward Penguin", ".jpeg", 100, folder1);
+        File file2 = new File("Doom", ".exe", 100, folder1);
+        File file3 = new File("Nyan Cat", ".swf", 100, folder2);
+        File file4 = new File("Doggo", ".png", 100, folder3);
+        File file5 = new File("Your Ma", ".txt", 100, folder4);
+        File file6 = new File("Filthy Frank", ".txt", 100, folder2);
+        File file7 = new File("Bulbasaur", ".txt", 100, folder2);
+        File file8 = new File("More of your Ma", ".txt", 100, folder1);
 
         fileRepository.save(file1);
         fileRepository.save(file2);
